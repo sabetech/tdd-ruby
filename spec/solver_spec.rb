@@ -17,7 +17,7 @@ describe Solver do
       expect { @solver.factorial(-1) }.to raise_error(RuntimeError, 'Argument given is negative!')
     end
 
-    it 'reverse should return ther reversed strint of input' do
+    it 'reverse should return there reversed strint of input' do
       expect(@solver.reverse('hello')).to eq('olleh')
     end
 
