@@ -1,4 +1,5 @@
-# we are creating this file first because in TDD we start with the test first and it will show up in the commit history ...
+# we are creating this file first because in TDD we start with the test first
+# and it will show up in the commit history ...
 
 require_relative '../solver'
 
@@ -17,7 +18,7 @@ describe Solver do
     end
 
     it 'reverse should return ther reversed strint of input' do
-      expect(@solver.reverse("hello")).to eq('olleh')
+      expect(@solver.reverse('hello')).to eq('olleh')
     end
 
     it 'fizzbuzz should return fizz when N divisible by 3' do
