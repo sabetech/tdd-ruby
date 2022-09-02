@@ -19,7 +19,7 @@ describe Solver do
     end
 
     it 'factorial should return 0 when input is 1' do
-      expect(@solver.factorial(1)).to eq(1)
+      expect(@solver.factorial(0)).to eq(1)
     end
 
     it 'reverse should return there reversed strint of input' do
