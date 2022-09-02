@@ -1,6 +1,8 @@
-# we are creating this file first because in TDD we start with the test first and it will show up in the commit history ...
+# we are creating this file first because in TDD we start with the test first
 
-require_relative '../spec/solver'
+# and it will show up in the commit history ...
+
+require_relative '../solver'
 
 describe Solver do
   before :each do
@@ -16,7 +18,13 @@ describe Solver do
       expect { @solver.factorial(-1) }.to raise_error(RuntimeError, 'Argument given is negative!')
     end
 
-    # You can write the TESTS for reverse function
+    it 'factorial should return 0 when input is 1' do
+      expect(@solver.factorial(0)).to eq(1)
+    end
+
+    it 'reverse should return there reversed strint of input' do
+      expect(@solver.reverse('hello')).to eq('olleh')
+    end
 
     it 'fizzbuzz should return fizz when N divisible by 3' do
       expect(@solver.fizzbuzz(9)).to eq('fizz')
@@ -24,6 +32,14 @@ describe Solver do
 
     it 'fizzbuzz should return buzz when N divisible by 5' do
       expect(@solver.fizzbuzz(10)).to eq('buzz')
+    end
+
+    it 'fizzbuzz should return fizzbuzz when N divisible by 3 and 5' do
+      expect(@solver.fizzbuzz(15)).to eq('fizzbuzz')
+    end
+
+    it 'fizzbuzz should return N as string for any other case' do
+      expect(@solver.fizzbuzz(7)).to eq(7)
     end
   end
 end
