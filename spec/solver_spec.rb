@@ -18,6 +18,10 @@ describe Solver do
       expect { @solver.factorial(-1) }.to raise_error(RuntimeError, 'Argument given is negative!')
     end
 
+    it 'factorial should return 0 when input is 1' do
+      expect(@solver.factorial(1)).to eq(0)
+    end
+
     it 'reverse should return there reversed strint of input' do
       expect(@solver.reverse('hello')).to eq('olleh')
     end
